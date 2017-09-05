@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "generator-react-slick": "^0.3.0",
     "material-ui": "^0.19.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13",
-    "react-slick": "^0.15.4",
-    "yo": "^2.0.0"
+    "react-slick": "^0.15.4"
   },
   "scripts": {
     "start": "react-scripts start",
