@@ -1,92 +1,151 @@
 import React from 'react';
-import {Card, CardActions, CardHeader,CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
-import Toggle from 'material-ui/Toggle';
- 
- 
+import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
 
-var ContentArea = () => (
-	<div>
-		<Card>
-		    <CardHeader
-		      title="Without Avatar"
-		      subtitle="Subtitle"
-		      actAsExpander={true}
-		      showExpandableButton={true}
-		    />
-		    <CardActions>
-		      <FlatButton label="Action1" />
-		      <FlatButton label="Action2" />
-		    </CardActions>
-		    <CardText expandable={true}>
-		      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-		      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-		      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-		    </CardText>
-		</Card>
-		<Card>
-		    <CardHeader
-		      title="Without Avatar"
-		      subtitle="Subtitle"
-		      actAsExpander={true}
-		      showExpandableButton={true}
-		    />
-		    <CardActions>
-		      <FlatButton label="Action1" />
-		      <FlatButton label="Action2" />
-		    </CardActions>
-		    <CardText expandable={true}>
-		      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-		      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-		      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-		    </CardText>
-		</Card>	
-		<Card>
-		    <CardHeader
-		      title="Without Avatar"
-		      subtitle="Subtitle"
-		    />
-		    <CardActions>
-		      <FlatButton label="Action1" />
-		      <FlatButton label="Action2" />
-		    </CardActions>
-		    <CardText expandable={true}>
-		      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-		      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-		      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-		    </CardText>
-		</Card>		
-		<Card >
-        <CardHeader
-          title="URL Avatar"
-          subtitle="Subtitle"
-          avatar="images/ok-128.jpg"
-          showExpandableButton={true}
-        />
-        <CardText>
-        </CardText>
-        <CardMedia
-          expandable={true}
-          overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-        >
-          <img src="images/nature-600-337.jpg" alt="" />
-        </CardMedia>
-        <CardTitle title="Card title" subtitle="Card subtitle" expandable={true} />
-        <CardText expandable={true}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-          Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-          Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-        </CardText>
-        <CardActions>
-          <FlatButton label="Expand" onClick={this.handleExpand} />
-          <FlatButton label="Reduce" onClick={this.handleReduce} />
-        </CardActions>
-      </Card>
-	</div>
-);
+
+ 
+const ContentArea = React.createClass({
+	getInitialState: function(){
+		let details= [{
+					title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
+	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
+	            	description: "Test 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	deadline: " 1 month",
+	            	minimum_exp: "10 years",
+	            	posted_on : "1 month ago",
+	            	job_type: "Full time",
+	            	link_title: "",
+	            	link_apply: ""
+            	},
+	            {
+	            	title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
+	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
+	            	description: "Test 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	deadline: " 1 month",
+	            	minimum_exp: "10 years",
+	            	posted_on : "1 month ago",
+	            	job_type: "Full time",
+	            	link_title: "",
+	            	link_apply: ""
+            	},
+	            {
+	            	title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
+	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
+	            	description: "Test 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	deadline: " 1 month",
+	            	minimum_exp: "10 years",
+	            	posted_on : "1 month ago",
+	            	job_type: "Full time",
+	            	link_title: "",
+	            	link_apply: ""
+            	},
+            	{
+	            	title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
+	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
+	            	description: "Test 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	deadline: " 1 month",
+	            	minimum_exp: "10 years",
+	            	posted_on : "1 month ago",
+	            	job_type: "Full time",
+	            	link_title: "",
+	            	link_apply: ""
+            	},
+            	{
+	            	title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
+	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
+	            	description: "Test 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	deadline: " 1 month",
+	            	minimum_exp: "10 years",
+	            	posted_on : "1 month ago",
+	            	job_type: "Full time",
+	            	link_title: "",
+	            	link_apply: ""
+            	},
+            ];
+        return {
+            details: details ,
+            currentPage: 0,
+      		allItems: details.length,
+      		perPage: 3
+        }
+    },
+
+    prevPage: function() {
+	    let nextPage = this.state.currentPage - 1;
+
+	    if (nextPage < 0) return;
+
+	    this.setState(Object.assign(this.state, { currentPage: nextPage }));
+  	},
+
+  	nextPage: function() {
+	    let nextPage = this.state.currentPage + 1;
+	    if (nextPage >= this.state.allItems / this.state.perPage) return;
+
+	    this.setState(Object.assign(this.state, { currentPage: nextPage }));
+  	},
+
+	render: function () {
+		const perPage = this.state.perPage;
+		const currentPage = this.state.currentPage;
+        var details_slice = this.state.details.slice(currentPage*perPage,(currentPage+1)*perPage)
+        var cards = details_slice.map(function(card,index){
+            return (<JobCard key={index} job_detail={card}/>)
+        });
+        
+		return (
+			<div>
+				<div>
+					Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
+					<button onClick={this.prevPage}>previous</button>
+					<button onClick={this.nextPage}>next</button>
+				</div>
+				{cards}
+				<div>
+					<button onClick={this.prevPage}>previous</button>
+					<button onClick={this.nextPage}>next</button>
+				</div>
+			</div>
+		)
+	}
+});
+
+const JobCard = React.createClass({
+	render: function () {
+		return(
+			<Paper>
+				<div>
+					<h4>{this.props.job_detail.title}</h4>
+				</div>
+
+				<div>
+					<div>
+						<img src={this.props.job_detail.src}></img>
+					</div>
+					<div>
+						<t>
+						Posted On <b>{this.props.job_detail.posted_on}</b>
+						</t>
+						<t>
+						Job Type <b>{this.props.job_detail.job_type}</b>
+						</t>
+						<t>
+							{this.props.job_detail.description}
+						</t>
+					</div>
+				</div>
+
+				<div>
+					<t>Deadline: <b>{this.props.job_detail.deadline}</b> ...</t> 
+					<t>Minimum Experience: <b>{this.props.job_detail.minimum_exp}</b></t>
+					<RaisedButton label="Primary" primary={true} />
+				</div>
+
+			</Paper>
+			
+		)
+	}
+})
+
 
 export default ContentArea;
