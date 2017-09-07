@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -8,11 +10,15 @@ import SearchBarArea from './SearchBarArea';
 import SliderArea from './SliderArea';
 import ContentArea from './ContentArea';
 import FooterArea from './FooterArea';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+const muiTheme = getMuiTheme({
+  fontFamily: 'Arial'
+   
+});
 
 var App = () => (
-  <MuiThemeProvider>
+  <MuiThemeProvider muiTheme={muiTheme}>
     <div>
 		<HeaderArea/>
 	    <SearchBarArea/>

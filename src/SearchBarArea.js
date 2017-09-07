@@ -3,8 +3,8 @@ import SearchBar from 'material-ui-search-bar'
  
 
 var SearchBarArea = () => (
-	<div>
-		<h2>Find the right job, right now</h2>
+	<div className='searchbararea padding-top-50 padding-bottom-50'>
+		<h1 className='text-center padding-bottom-20'>Find the right job, right now</h1>
 		<SearchBar
 			onChange={() => console.log('onChange')}
 			onRequestSearch={() => console.log('onRequestSearch')}

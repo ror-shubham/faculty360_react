@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    padding : 0;
+}
 .container {
   margin: 0 auto;
   padding: 40px;
@@ -5,3 +9,21 @@
   color: #333;
   background: #419be0;
 }
+.padding-top-20{
+    padding-top: 20px;
+}
+.padding-top-50{
+    padding-top: 50px;
+}
+.padding-bottom-20{
+    padding-bottom: 20px;
+}
+.padding-bottom-50{
+    padding-bottom: 50px;
+}
+.searchbararea{
+    background: #00b4a0;
+    color: white;
+}
+
+
