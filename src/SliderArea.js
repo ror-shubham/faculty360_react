@@ -8,6 +8,34 @@ import Paper from 'material-ui/Paper';
  
 
 const SliderArea = React.createClass({
+    getInitialState: function(){
+        return ({
+            details: [{
+                title: "Management",
+                title_icon: "",
+                branches: ["Design", "IT", "Civil", "Mech", "GT"]
+
+            },
+            {
+                title: "Management",
+                title_icon: "",
+                branches: ["Design", "IT", "Civil", "Mech", "GT"]
+
+            },
+            {
+                title: "Management",
+                title_icon: "",
+                branches: ["Design", "IT", "Civil", "Mech", "GT"]
+
+            },
+            {
+                title: "Management",
+                title_icon: "",
+                branches: ["Design", "IT", "Civil", "Mech", "GT"]
+
+            }]
+        });
+    },
     render: function () {
         var settings = {
             infinite: false,
@@ -17,56 +45,29 @@ const SliderArea = React.createClass({
             arrows: true,
             className: 'slides',
             centerMode: true
-    };
+        };
 
-    getInitialState: function(){
-        return {
-            details: {
-                title: "Management",
-                title_icon: "",
-                branches: ["Design", "IT", "Civil", "Mech", "GT"]
+    
 
-            },
-            {
-                title: "Management",
-                title_icon: "",
-                branches: ["Design", "IT", "Civil", "Mech", "GT"]
-
-            }
-            {
-                title: "Management",
-                title_icon: "",
-                branches: ["Design", "IT", "Civil", "Mech", "GT"]
-
-            },
-            {
-                title: "Management",
-                title_icon: "",
-                branches: ["Design", "IT", "Civil", "Mech", "GT"]
-
-            }
-        }
-    },
-
-    var slider_cards = this.state.details.map(function(card_detail, index){
-            return <div><SliderCard details = card_detail/></div>
+        var slider_cards = this.state.details.map(function(card_detail, index){
+            return <div><SliderCard details = {card_detail} key = {index}/></div>
         });             
 
-    return (
-        <div className='container'>
-            <Slider {...settings}>
-                {slider_cards}
+        return (
+            <div className='container'>
+                <Slider {...settings}>
+                    {slider_cards}
 
-            </Slider>
-        </div>
-    );
+                </Slider>
+            </div>
+        );
     }
 });
 
 const SliderCard = React.createClass({
     render: function(){
         return(
-            <Paper><h3>{this.props.details}</h3></Paper>
+            <Paper><h3>{this.props.details.title}</h3></Paper>
             );
     }
 });
