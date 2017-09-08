@@ -114,32 +114,39 @@ const ContentArea = React.createClass({
 const JobCard = React.createClass({
 	render: function () {
 		return(
-			<Paper>
-				<div>
-					<h4>{this.props.job_detail.title}</h4>
-				</div>
+			<Paper style={{
+				margin: "10px 20px",
+				overflow: "hidden"
+			}}>
+				<div className="jobcard">
+					<div className="jobcardup">
+						<div>
+							<h3><strong>{this.props.job_detail.title}</strong></h3>
+						</div>
 
-				<div>
-					<div>
-						<img className="img-responsive" width="100" height="100" src={this.props.job_detail.src}></img>
+						<div>
+							<div>
+								<img className="img-responsive" width="100" height="100" src={this.props.job_detail.src}></img>
+							</div>
+							<div>
+								<t>
+								Posted On <b>{this.props.job_detail.posted_on}</b>
+								</t>
+								<t>
+								Job Type <b>{this.props.job_detail.job_type}</b>
+								</t>
+								<t>
+									{this.props.job_detail.description}
+								</t>
+							</div>
+						</div>
 					</div>
-					<div>
-						<t>
-						Posted On <b>{this.props.job_detail.posted_on}</b>
-						</t>
-						<t>
-						Job Type <b>{this.props.job_detail.job_type}</b>
-						</t>
-						<t>
-							{this.props.job_detail.description}
-						</t>
-					</div>
-				</div>
 
-				<div>
-					<t>Deadline: <b>{this.props.job_detail.deadline}</b> ...</t> 
-					<t>Minimum Experience: <b>{this.props.job_detail.minimum_exp}</b></t>
-					<RaisedButton label="Primary" primary={true} />
+					<div className="jobcardlow">
+						<t>Deadline: <b>{this.props.job_detail.deadline}</b> ...</t> 
+						<t>Minimum Experience: <b>{this.props.job_detail.minimum_exp}</b></t>
+						<button type="button" className="btn btn-md apply-btn">Apply</button>
+					</div>
 				</div>
 
 			</Paper>

@@ -40,5 +40,35 @@ body{
 width:40vw;
 }
 }
+.jobcard{
+    background: #F6F6F6;
+    color: #808080;
+    padding:0px 0px 35px 0px;
 
+}
+.jobcard b{
+  color: black;
+}
+.jobcard h3{
+  color:#00b4a0;
+  margin: 0;
+}
 
+.jobcardup{
+    background: #FFF;
+    color: #808080;
+    padding:18px 15px 35px 23px;
+
+}
+
+.jobcardlow{
+    color: #808080;
+    padding:18px 15px 0px 23px;
+
+}
+.apply-btn{
+  float: right;
+  overflow: hidden;
+  background: #00b4a0;
+  color: #FFF;
+}

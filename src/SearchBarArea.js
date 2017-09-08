@@ -16,7 +16,12 @@ var SearchBarArea = () => (
 			onChange={() => console.log('onChange')}
 			onRequestSearch={() => console.log('onRequestSearch')}
             hintText={"Search skills,roles and specialization"}
-			
+
+			style={{
+				margin: '0 auto',
+				maxWidth: 800,
+				fontSize: "13px"
+			}}
 			iconButtonStyle={{
 				background: "rgb(253,182,0)"
 			}}
