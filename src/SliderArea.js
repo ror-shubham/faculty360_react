@@ -57,24 +57,33 @@ const SliderArea = React.createClass({
     }
 });
 
-const SliderCard = React.createClass({
-    render: function(){
-        var branches = this.props.details.branches.slice(0,5).map(function(branch, index){
+function SliderCard(props){
+    var branches = props.details.branches.slice(0,5).map(function(branch, index){
             return <button type="button" className="btn btn-default" key={index}>{branch}</button>
         });
-        console.log(branches)
-        branches.push(<button type="button" className="btn btn-default" key="5">{"+"+(this.props.details.branches.length-5)}</button>);
+    console.log(branches)
+    if (props.details.branches.length<=5){
         return(
             <div className=" well well-lg paddingzero">
-                <div className="sliderpapertitle"><h3>{this.props.details.title}</h3></div>
-                <Divider/>
-                <div className="sliderpapertext">Select Branch</div>
-                <div className="sliderpaperbuttons">{branches}</div>
-            </div>
-            
-        );
+                    <div className="sliderpapertitle"><h3>{props.details.title}</h3></div>
+                    <Divider/>
+                    <div className="sliderpapertext">Select Branch</div>
+                    <div className="sliderpaperbuttons">{branches}</div>
+                </div>
+            )
     }
-});
+    branches.push(<button type="button" className="btn btn-default" key="5"
+            >{"+"+(props.details.branches.length-5)}</button>)
+    return(
+            <div className=" well well-lg paddingzero">
+                    <div className="sliderpapertitle"><h3>{props.details.title}</h3></div>
+                    <Divider/>
+                    <div className="sliderpapertext">Select Branch</div>
+                    <div className="sliderpaperbuttons">{branches}</div>
+                </div>
+            )
+}
+
 
 $(document).ready(function(){
     $('.slick').slick({
