@@ -35,11 +35,13 @@ body{
     padding:0px 0px 35px 0px;
 
 }
+<<<<<<< Updated upstream
 
 .jobcard h3,.jobcard h4{
-  color:#00b4a0;
+  color: #666 !important;
   margin: 0;
 }
+
 nav{
  margin:0 !important;   
 }
@@ -112,9 +114,9 @@ width:40vw;
     background: #FFF !important;
 }
 .slick-prev:before, .slick-next:before{
-    color:red;
+    color:lightgrey;
 }
-.slick-slide:focus { outline: none; }
+.slick-slide:focus { outline: none;}
 
 .nav li a:focus, .nav li a:hover {
     background: none !important;
@@ -153,4 +155,12 @@ span{
 }
 b{
     color:#666 ;
+}
+.btn-log{
+    background:#00b4a0;
+    color:#fff;
+}
+.btn-log:hover{
+    background:#00b4a0;
+    color:#fff !important;
 }
