@@ -11,6 +11,7 @@ import SliderArea from './SliderArea';
 import ContentArea from './ContentArea';
 import FooterArea from './FooterArea';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Arial'
