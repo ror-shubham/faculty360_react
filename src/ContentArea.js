@@ -95,13 +95,13 @@ const ContentArea = React.createClass({
         
 		return (
 			<div>
-				<div>
+				<div className="text-center">
 					Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
 					<button onClick={this.prevPage}>previous</button>
 					<button onClick={this.nextPage}>next</button>
 				</div>
 				{cards}
-				<div>
+				<div className="text-center">
 					Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
 					<button onClick={this.prevPage}>previous</button>
 					<button onClick={this.nextPage}>next</button>

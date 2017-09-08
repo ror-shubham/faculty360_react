@@ -74,7 +74,7 @@ class FooterArea extends Component {
         
               <li className="col-xs-4 text-right padding0"><a href="#">Privacy</a></li>
               <li className="col-xs-4 text-center padding0"><a href="#">Sitemap</a></li>
-              <li className="col-xs-4 text-left padding0"><a href="#">Sleep</a></li>
+              <li className="col-xs-4 text-left padding0"><a href="#">Press</a></li>
               <li className="col-xs-12 text-center padding0"><a href="#">Copyright @ 2017 Careers360 </a></li>
             </ul>
           </div>
