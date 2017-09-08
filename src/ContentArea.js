@@ -94,14 +94,14 @@ const ContentArea = React.createClass({
         });
         
 		return (
-			<div>
-				<div className="text-center">
+			<div className="content">
+				<div className="content-buttons">
 					Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
                     <button className="btn btn-success" onClick={this.prevPage}><span className="glyphicon glyphicon-chevron-left"></span></button>
 					<button className="btn btn-success" onClick={this.nextPage}><span className="glyphicon glyphicon-chevron-right"></span></button>               
 				</div>
 				{cards}
-				<div className="text-center">
+				<div className="content-buttons">
 					Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
 					<button className="btn btn-success" onClick={this.prevPage}><span className="glyphicon glyphicon-chevron-left"></span></button>
 					<button className="btn btn-success" onClick={this.nextPage}><span className="glyphicon glyphicon-chevron-right"></span></button> 
