@@ -1,8 +1,11 @@
 import React from 'react';
-import IconButton from 'material-ui/IconButton';
-import AppBar from 'material-ui/AppBar';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
- 
+import RaisedButton from 'material-ui/RaisedButton';
+import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import logo from './logo.png'
+import Paper from 'material-ui/Paper'; 
+
+
+<<<<<<< Updated upstream
 
 
 var HeaderArea = () => (
@@ -17,6 +20,26 @@ var HeaderArea = () => (
     </ul>
   </div>
 </nav>
+
+=======
+
+var HeaderArea = () => (
+	<nav className="navbar">
+	  <div className="container-fluid row">
+	    <div className="navbar-header col-xs-5 col-sm-3">
+	      <a className="navbar-brand" href="#"><img className="img-responsive" height="170" width="170" src={logo}></img></a>
+	    </div>
+	    <div className="col-xs-2 col-sm-6">
+	    </div>
+	    <div className="nav navbar-nav navbar-right col-xs-5 col-sm-3 row">
+	      <button label="LOG IN" className="btn col-xs-6 responsive-width">LOGIN</button>
+		  <button label="SIGN UP" primary={true} className="btn col-xs-6 responsive-width">SIGN UP</button>
+	    </div>
+	  </div>
+	</nav>
+	
+>>>>>>> Stashed changes
 );
 
 export default HeaderArea;
+
