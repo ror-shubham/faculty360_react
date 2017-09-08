@@ -10,19 +10,20 @@ var SearchBarArea = () => (
         style={{
             color: 'white',
             fontFamily: 'Raleway',
-            
             }}>
         Find the right job, right now</h1>
 		<SearchBar
 			onChange={() => console.log('onChange')}
 			onRequestSearch={() => console.log('onRequestSearch')}
             hintText={"Search skills,roles and specialization"}
-			style={{
-			margin: '0 auto',
-			maxWidth: 800,
-			}}
+			
 			iconButtonStyle={{
 				background: "rgb(253,182,0)"
+			}}
+            style={{
+			margin: '0 auto',
+			maxWidth: 800,
+            width:'90%',       
 			}}
 			searchIcon={searchIcon}
 		/>

@@ -8,17 +8,23 @@ import Paper from 'material-ui/Paper';
 
 
 var HeaderArea = () => (
-	<nav className="navbar navbar-inverse" style={{margin:0,borderRadius:0,}}>
+	<nav className="navbar" style={{margin:0,borderRadius:0,}}>
 	  <div className="container-fluid">
 	    <div className="navbar-header" style={{float:'left',}}>
-	      <a className="navbar-brand" href="#">WebSiteName</a>
+	      <a className="navbar-brand" href="#"><img src={logo} className="img-responsive" width="150" height="150"/></a>
 	    </div>
-	    <ul className="nav navbar-nav" style={{float:'right',}}>
-	      <li style={{float:'right',}}><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	      <li style={{float:'right',}}><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
-	    </ul>
+	    <div className="btn-group" data-toggle="buttons" style={{float:'right',}}>
+  <label className="btn btn-sm">
+    <input type="radio" name="options" id="option1" autocomplete="off"/> LOG IN
+  </label>
+  <label className="btn btn-sm active">
+    <input type="radio" name="options" id="option2" autocomplete="off" checked/> SIGN UP
+  </label>
+  
+</div>
 	  </div>
 	</nav>
 );
 export default HeaderArea;
+
 

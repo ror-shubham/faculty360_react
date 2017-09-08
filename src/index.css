@@ -24,6 +24,21 @@ body{
 .searchbararea{
     background: #00b4a0;
 }
+.searchbararea div div div div{
+    font-size: 13px;
+}
+.btn-group{
+    top:10px;
+}
 
+
+@media (max-width: 352px){
+.searchbararea div div div div{
+    font-size: 3.5vw;
+}
+.img-responsive{
+width:40vw;
+}
+}
 
 
