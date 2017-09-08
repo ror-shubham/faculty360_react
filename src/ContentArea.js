@@ -97,14 +97,14 @@ const ContentArea = React.createClass({
 			<div>
 				<div className="text-center">
 					Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
-					<button onClick={this.prevPage}>previous</button>
-					<button onClick={this.nextPage}>next</button>
+                    <button className="btn btn-success" onClick={this.prevPage}><span className="glyphicon glyphicon-chevron-left"></span></button>
+					<button className="btn btn-success" onClick={this.nextPage}><span className="glyphicon glyphicon-chevron-right"></span></button>               
 				</div>
 				{cards}
 				<div className="text-center">
 					Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
-					<button onClick={this.prevPage}>previous</button>
-					<button onClick={this.nextPage}>next</button>
+					<button className="btn btn-success" onClick={this.prevPage}><span className="glyphicon glyphicon-chevron-left"></span></button>
+					<button className="btn btn-success" onClick={this.nextPage}><span className="glyphicon glyphicon-chevron-right"></span></button> 
 				</div>
 			</div>
 		)
@@ -121,23 +121,29 @@ const JobCard = React.createClass({
 				<div className="jobcard">
 					<div className="jobcardup">
 						<div>
-							<h3><strong>{this.props.job_detail.title}</strong></h3>
+							<h3 className="padding-bottom-20 hidden-xs"><strong>{this.props.job_detail.title}</strong></h3>
+                            <h4 className="padding-bottom-20 hidden-lg hidden-md hidden-sm"><strong>{this.props.job_detail.title}</strong></h4>
 						</div>
 
-						<div>
-							<div>
+						<div className="row">
+							<div className="col-xs-2 flex hidden-xs">
 								<img className="img-responsive" width="100" height="100" src={this.props.job_detail.src}></img>
 							</div>
-							<div>
-								<t>
-								Posted On <b>{this.props.job_detail.posted_on}</b>
-								</t>
-								<t>
-								Job Type <b>{this.props.job_detail.job_type}</b>
-								</t>
-								<t>
-									{this.props.job_detail.description}
-								</t>
+							<div className="col-xs-10" 
+                                style={{display:"flex;",
+                                        justifyContent:"baseline",
+                                }}>
+            <div>
+                                    <t>
+                                    Posted On : <b>{this.props.job_detail.posted_on}</b>
+                                    </t>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <t>
+                                    Job Type : <b>{this.props.job_detail.job_type}</b>
+                                    </t><br/><br/><br/>
+                                    <t>
+                                        {this.props.job_detail.description}
+                                    </t>
+            </div>
 							</div>
 						</div>
 					</div>

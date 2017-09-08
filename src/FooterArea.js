@@ -45,7 +45,7 @@ class FooterArea extends Component {
             <ul className="nav navbar-nav">
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Sitemap</a></li>
-              <li><a href="#">Sleep</a></li>
+              <li><a href="#">Press</a></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li><a href="#">Copyright @ 2017 Careers360 </a></li>
