@@ -27,7 +27,7 @@ var App = () => (
 	    <SearchBarArea/>
 	    <SliderArea/>
 	    <ContentArea/>
-	    <FooterArea/>
+	    
 	</div>
   </MuiThemeProvider>
 );

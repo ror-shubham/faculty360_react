@@ -102,6 +102,7 @@ const ContentArea = React.createClass({
 				</div>
 				{cards}
 				<div>
+					Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
 					<button onClick={this.prevPage}>previous</button>
 					<button onClick={this.nextPage}>next</button>
 				</div>
@@ -120,7 +121,7 @@ const JobCard = React.createClass({
 
 				<div>
 					<div>
-						<img src={this.props.job_detail.src}></img>
+						<img className="img-responsive" width="100" height="100" src={this.props.job_detail.src}></img>
 					</div>
 					<div>
 						<t>

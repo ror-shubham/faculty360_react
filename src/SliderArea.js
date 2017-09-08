@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 //import 'slick-carousel/slick/slick.css';
 import './index.css';
 import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
 
  
 
@@ -66,8 +67,15 @@ const SliderArea = React.createClass({
 
 const SliderCard = React.createClass({
     render: function(){
+        const branches = this.props.details.branches.map(function(branch, index){
+            return <RaisedButton label={branch} key={index} />
+        })
         return(
-            <Paper><h3>{this.props.details.title}</h3></Paper>
+            <Paper>
+                <h3>{this.props.details.title}</h3>
+                Select Branch
+                {branches}
+            </Paper>
             );
     }
 });

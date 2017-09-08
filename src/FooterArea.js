@@ -3,6 +3,7 @@ import FontIcon from 'material-ui/FontIcon';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
+import logo from './logo.png'
 
 const recentsIcon = <FontIcon className="material-icons">Home</FontIcon>;
 const favoritesIcon = <FontIcon className="material-icons">Tool</FontIcon>;
@@ -26,10 +27,9 @@ class FooterArea extends Component {
     return (
       <Paper zDepth={1}>
         <BottomNavigation selectedIndex={this.state.selectedIndex}>
-          <BottomNavigationItem
-            icon={faculty360}
-            onClick={() => this.select(0)}
-          />
+          
+            <img src={logo}/>
+          
           <BottomNavigationItem
             icon={recentsIcon}
             onClick={() => this.select(1)}
@@ -42,10 +42,7 @@ class FooterArea extends Component {
             icon={rankingsIcon}
             onClick={() => this.select(3)}
           />
-          <BottomNavigationItem
-            icon={careersIcon}
-            onClick={() => this.select(4)}
-          />
+          
         </BottomNavigation>
       </Paper>
     );
