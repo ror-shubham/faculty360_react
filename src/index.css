@@ -30,6 +30,13 @@ body{
 .btn-group{
     top:10px;
 }
+nav{
+ margin:0 !important;   
+}
+.margin0{
+    margin:0 !important;
+}
+
 
 
 @media (max-width: 352px){
@@ -71,4 +78,26 @@ width:40vw;
   overflow: hidden;
   background: #00b4a0;
   color: #FFF;
+}
+.nav li a:focus, .nav li a:hover {
+    background: none !important;
+}
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+footer{
+    padding: 20px 0 20px 0;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.padding0{
+    padding:0 !important;
+}
+.paddinglr{
+    padding-left:20px !important;
+    padding-right:20px !important;
 }
