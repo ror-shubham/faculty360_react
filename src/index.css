@@ -7,7 +7,6 @@ body{
   padding: 40px;
   width: 80%;
   color: #333;
-  background: #419be0;
 }
 .padding-top-20{
     padding-top: 20px;
@@ -30,7 +29,25 @@ body{
 .btn-group{
     top:10px;
 }
+.jobcard{
+    background: #F6F6F6;
+    color: #808080;
+    padding:0px 0px 35px 0px;
 
+}
+.jobcard b{
+  color: black;
+}
+.jobcard h3{
+  color:#00b4a0;
+  margin: 0;
+}
+
+.jobcardup{
+    background: #FFF;
+    color: #808080;
+    padding:18px 15px 35px 23px;
+  }
 
 @media (max-width: 352px){
 .searchbararea div div div div{
@@ -72,3 +89,26 @@ width:40vw;
   background: #00b4a0;
   color: #FFF;
 }
+.sliderpapertitle{
+    padding:0px 15px 0px 23px;
+}
+.sliderpapertext{
+    padding:18px 15px 10px 23px;
+}
+.sliderpaperbuttons{
+    padding:18px 15px 10px 23px;
+}
+
+.slidercard{
+    padding:0 5px;
+    height: 244px;
+}
+.paddingzero{
+    padding: 0px !important;
+    height: 228px !important;
+    background: #FFF !important;
+}
+.slick-prev:before, .slick-next:before{
+    color:red;
+}
+.slick-slide:focus { outline: none; }
