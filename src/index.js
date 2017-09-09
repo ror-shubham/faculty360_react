@@ -12,7 +12,6 @@ import ContentArea from './ContentArea';
 import FooterArea from './FooterArea';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-var $ = require('jquery');
 require("slick-carousel");
 
 const muiTheme = getMuiTheme({

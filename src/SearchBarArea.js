@@ -6,7 +6,7 @@ import {black} from 'material-ui/styles/colors'
 var searchIcon=<SearchIcon color={black} />
 var SearchBarArea = () => (
 	<div className='searchbararea padding-top-50 padding-bottom-50'>
-		<h1 className='text-center padding-bottom-20'
+		<h1 className='text-center padding-bottom-20 h1white'
         style={{
             color: 'white',
             fontFamily: 'Raleway',
@@ -20,15 +20,11 @@ var SearchBarArea = () => (
 			style={{
 				margin: '0 auto',
 				maxWidth: 800,
-				fontSize: "13px"
+				fontSize: "13px",
+				width:'90%',
 			}}
 			iconButtonStyle={{
 				background: "rgb(253,182,0)"
-			}}
-            style={{
-			margin: '0 auto',
-			maxWidth: 800,
-            width:'90%',       
 			}}
 			searchIcon={searchIcon}
 		/>

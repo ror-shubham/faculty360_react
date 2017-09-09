@@ -35,9 +35,8 @@ body{
     padding:0px 0px 35px 0px;
 
 }
-<<<<<<< Updated upstream
 
-.jobcard h3,.jobcard h4{
+.jobcard h3,.jobcard h4, .h1grey{
   color: #666 !important;
   margin: 0;
 }
@@ -108,9 +107,9 @@ width:40vw;
     padding:0 5px;
     height: 244px;
 }
-.paddingzero{
+.jobcardwell{
     padding: 0px !important;
-    height: 228px !important;
+    height: 243px !important;
     background: #FFF !important;
 }
 .slick-prev:before, .slick-next:before{
@@ -166,4 +165,14 @@ b{
 }
 .content-buttons{
     margin-left: 22px;
+}
+.content{
+    padding:20px 0;
+}
+.jobcardbutton {
+    width: 78px !important;
+    margin: 4px;
+}
+.h1search{
+    color: #000 !important
 }

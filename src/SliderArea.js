@@ -1,16 +1,37 @@
 import React from 'react';
-import Slider      from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 import './index.css';
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
 import Divider from 'material-ui/Divider';
 var $ = require('jquery');
 
 
-
+function SliderCard(props){
+    var branches = props.details.branches.slice(0,5).map(function(branch, index){
+            return <button type="button" className="btn btn-default jobcardbutton" key={index}>{branch}</button>
+        });
+    if (props.details.branches.length<=5){
+        return(
+            <div className=" well well-lg jobcardwell">
+                    <div className="sliderpapertitle"><h3>{props.details.title}</h3></div>
+                    <Divider/>
+                    <div className="sliderpapertext">Select Branch</div>
+                    <div className="sliderpaperbuttons">{branches}</div>
+                </div>
+            )
+    }
+    branches.push(<button type="button" className="btn btn-default jobcardbutton" key="5"
+            >{"+"+(props.details.branches.length-5)}</button>)
+    return(
+            <div className=" well well-lg jobcardwell">
+                    <div className="sliderpapertitle"><h3>{props.details.title}</h3></div>
+                    <Divider/>
+                    <div className="sliderpapertext">Select Branch</div>
+                    <div className="sliderpaperbuttons">{branches}</div>
+                </div>
+            )
+}
  
 
 const SliderArea = React.createClass({
@@ -50,39 +71,17 @@ const SliderArea = React.createClass({
         });             
 
         return (
-            <div className="slick container">
-                {slider_cards}
+            <div>
+                <h1 className="text-center padding-top-20 h1grey">Now explore over 3,200 faculty jobs in India</h1>
+                <div className="slick container">
+                    {slider_cards}
+                </div>
             </div>
         );
     }
 });
 
-function SliderCard(props){
-    var branches = props.details.branches.slice(0,5).map(function(branch, index){
-            return <button type="button" className="btn btn-default" key={index}>{branch}</button>
-        });
-    console.log(branches)
-    if (props.details.branches.length<=5){
-        return(
-            <div className=" well well-lg paddingzero">
-                    <div className="sliderpapertitle"><h3>{props.details.title}</h3></div>
-                    <Divider/>
-                    <div className="sliderpapertext">Select Branch</div>
-                    <div className="sliderpaperbuttons">{branches}</div>
-                </div>
-            )
-    }
-    branches.push(<button type="button" className="btn btn-default" key="5"
-            >{"+"+(props.details.branches.length-5)}</button>)
-    return(
-            <div className=" well well-lg paddingzero">
-                    <div className="sliderpapertitle"><h3>{props.details.title}</h3></div>
-                    <Divider/>
-                    <div className="sliderpapertext">Select Branch</div>
-                    <div className="sliderpaperbuttons">{branches}</div>
-                </div>
-            )
-}
+
 
 
 $(document).ready(function(){

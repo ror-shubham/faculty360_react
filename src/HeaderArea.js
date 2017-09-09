@@ -1,8 +1,5 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import logo from './logo.png'
-import Paper from 'material-ui/Paper'; 
 
 
 
@@ -37,11 +34,11 @@ const HeaderArea = React.createClass({
 					</div>
 				<div className="btn-group" data-toggle="buttons" style={{float:'right',}}>
 
-					<label className={"btn btn-sm "+this.state.login} onClick={this.clickLogin.bind(this)}>
-						<input type="radio" name="options" id="option1" autocomplete="off"/> LOG IN
+					<label className={"btn btn-sm "+this.state.login} onClick={this.clickLogin}>
+						<input type="radio" name="options" id="option1" autoComplete="off"/> LOG IN
 					</label>
-					<label className={"btn btn-sm " +this.state.signup} onClick={this.clickSignUp.bind(this)}>
-						<input type="radio" name="options" id="option2" autocomplete="off" checked/> SIGN UP
+					<label className={"btn btn-sm " +this.state.signup} onClick={this.clickSignUp}>
+						<input type="radio" name="options" id="option2" autoComplete="off"/> SIGN UP
 					</label>
 
 				</div>
