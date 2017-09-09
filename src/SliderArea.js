@@ -5,16 +5,24 @@ import 'slick-carousel/slick/slick.css';
 import './index.css';
 import Divider from 'material-ui/Divider';
 var $ = require('jquery');
+var createReactClass = require('create-react-class');
+
 
 
 function SliderCard(props){
     var branches = props.details.branches.slice(0,5).map(function(branch, index){
             return <button type="button" className="btn btn-default jobcardbutton" key={index}>{branch}</button>
         });
+    var Glyp = React.createClass({
+    render: function() {
+        return <span className={"glyphicon " +props.details.icon}></span>;
+        }
+    });
+
     if (props.details.branches.length<=5){
         return(
             <div className=" well well-lg jobcardwell">
-                    <div className="sliderpapertitle"><h3>{props.details.title}</h3></div>
+                    <div className="sliderpapertitle"><h3><Glyp/> {props.details.title}</h3></div>
                     <Divider/>
                     <div className="sliderpapertext">Select Branch</div>
                     <div className="sliderpaperbuttons">{branches}</div>
@@ -25,7 +33,7 @@ function SliderCard(props){
             >{"+"+(props.details.branches.length-5)}</button>)
     return(
             <div className=" well well-lg jobcardwell">
-                    <div className="sliderpapertitle"><h3>{props.details.title}</h3></div>
+                    <div className="sliderpapertitle"><h3><Glyp/> {props.details.title}</h3></div>
                     <Divider/>
                     <div className="sliderpapertext">Select Branch</div>
                     <div className="sliderpaperbuttons">{branches}</div>
@@ -34,31 +42,35 @@ function SliderCard(props){
 }
  
 
-const SliderArea = React.createClass({
+const SliderArea = createReactClass({
     getInitialState: function(){
         return ({
             details: [{
                 title: "Management",
                 title_icon: "",
-                branches: ["Design", "IT", "Civil", "Mech", "GT"]
+                branches: ["Design", "IT", "Civil", "Mech", "GT"],
+                icon: "glyphicon-glass"
 
             },
             {
                 title: "Management",
                 title_icon: "",
-                branches: ["IT", "Civil","Design", "Mech", "GT", "Design", "IT", "Civil", "Mech", "GT"]
+                branches: ["IT", "Civil","Design", "Mech", "GT", "Design", "IT", "Civil", "Mech", "GT"],
+                icon: "glyphicon-music"
 
             },
             {
                 title: "Management",
                 title_icon: "",
-                branches: ["Design", "IT", "Civil", "Mech", "GT"]
+                branches: ["Design", "IT", "Civil", "Mech", "GT"],
+                icon: "glyphicon-glass"
 
             },
             {
                 title: "Management",
                 title_icon: "",
-                branches: ["Design", "IT", "Civil", "Mech", "GT"]
+                branches: ["Design", "IT", "Civil", "Mech", "GT"],
+                icon: "glyphicon-music"
 
             }]
         });

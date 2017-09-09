@@ -1,7 +1,8 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
+var createReactClass = require('create-react-class');
 
-const JobCard = React.createClass({
+const JobCard = createReactClass({
 	render: function () {
 		return(
 			<Paper style={{
@@ -51,8 +52,7 @@ const JobCard = React.createClass({
 	}
 })
 
- 
-const ContentArea = React.createClass({
+ const ContentArea = createReactClass({
 	getInitialState: function(){
 		let details= [{
 					title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",

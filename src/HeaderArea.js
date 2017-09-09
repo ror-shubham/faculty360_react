@@ -1,9 +1,8 @@
 import React from 'react';
 import logo from './logo.png'
+var createReactClass = require('create-react-class');
 
-
-
-const HeaderArea = React.createClass({
+const HeaderArea = createReactClass({
 	getInitialState: function(){
         return {
             login: '',

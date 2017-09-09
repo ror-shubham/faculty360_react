@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import FontIcon from 'material-ui/FontIcon';
 import logo from './logo.png'
 
 
