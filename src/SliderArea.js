@@ -84,7 +84,8 @@ const SliderArea = createReactClass({
 
         return (
             <div>
-                <h1 className="text-center padding-top-20 h1grey">Now explore over 3,200 faculty jobs in India</h1>
+                <h1 className="text-center padding-top-20 h1grey hidden-xs padding-top-50">Now explore over 3,200 faculty jobs in India</h1>
+                <h3 className="text-center padding-top-20 h1grey hidden-sm hidden-lg hidden-md padding-top-50">Now explore over 3,200 faculty jobs in India</h3>
                 <div className="slick container">
                     {slider_cards}
                 </div>

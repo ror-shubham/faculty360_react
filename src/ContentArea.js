@@ -55,11 +55,22 @@ const JobCard = createReactClass({
  const ContentArea = createReactClass({
 	getInitialState: function(){
 		let details= [{
-					title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
+					title: "Asst Professor of Life Sciences in IIT Guwahati Guwahati",
 	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
-	            	description: "Test 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	            	deadline: " 1 month",
-	            	minimum_exp: "10 years",
+	            	minimum_exp: "5 years",
+	            	posted_on : "1 month ago",
+	            	job_type: "Full time",
+	            	link_title: "",
+	            	link_apply: ""
+            	},
+	            {
+	            	title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
+	            	src: "https://www.iitr.ac.in/departments/ECE/uploads/Image/IITR%20New%20LOGO/IITR%20New%20Logo.jpg",
+	            	description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam,",
+	            	deadline: " 1 month",
+	            	minimum_exp: "2 years",
 	            	posted_on : "1 month ago",
 	            	job_type: "Full time",
 	            	link_title: "",
@@ -68,18 +79,18 @@ const JobCard = createReactClass({
 	            {
 	            	title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
 	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
-	            	description: "Test 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	description: "Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi",
 	            	deadline: " 1 month",
-	            	minimum_exp: "10 years",
+	            	minimum_exp: "1 years",
 	            	posted_on : "1 month ago",
 	            	job_type: "Full time",
 	            	link_title: "",
 	            	link_apply: ""
             	},
-	            {
+            	{
 	            	title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
-	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
-	            	description: "Test 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	src: "https://www.iitr.ac.in/departments/ECE/uploads/Image/IITR%20New%20LOGO/IITR%20New%20Logo.jpg",
+	            	description: "condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum",
 	            	deadline: " 1 month",
 	            	minimum_exp: "10 years",
 	            	posted_on : "1 month ago",
@@ -89,10 +100,10 @@ const JobCard = createReactClass({
             	},
             	{
 	            	title: "Professor of Computer Science Engineering in IIT Guwahati Guwahati",
-	            	src: "http://www.iitg.ernet.in/stud/gymkhana/technical/images/logo.png",
-	            	description: "Test 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	            	src: "http://www.sit.iitd.ac.in/site-assets/images/iitd_logo.png",
+	            	description: "Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat",
 	            	deadline: " 1 month",
-	            	minimum_exp: "10 years",
+	            	minimum_exp: "7 years",
 	            	posted_on : "1 month ago",
 	            	job_type: "Full time",
 	            	link_title: "",
@@ -143,7 +154,8 @@ const JobCard = createReactClass({
         
 		return (
 			<div>
-				<h1 className="text-center h1grey">Top faculty jobs in India</h1>
+                <h1 className="text-center h1grey hidden-xs">Top faculty jobs in India</h1>
+				<h3 className="text-center h1grey hidden-sm hidden-lg hidden-md">Top faculty jobs in India</h3>
 				<div className="content">
 					<div className="content-buttons">
 						Showing {(currentPage)*perPage+1} to {(currentPage)*perPage+(details_slice.length)} of {this.state.allItems} jobs.
